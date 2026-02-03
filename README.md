@@ -17,30 +17,32 @@ Agents have begun to evolve beyond "Tool-Use Architectures" (providing models wi
 
 ```
 
-├── kimi-chat/               # Base chat configuration
-├── kimi-docs/               # Docs agent
-├── kimi-ok-computer/        # General computer control agent
-├── kimi-sheets/             # Sheets agent
-├── kimi-slides/             # Slides agent
-├── kimi-websites/           # Website builder agent
+├── agents/                  # Kimi agent configurations
+│   ├── chat/                # Base chat configuration
+│   ├── docs/                # Docs agent
+│   ├── ok-computer/         # General computer control agent
+│   ├── sheets/              # Sheets agent
+│   ├── slides/              # Slides agent
+│   └── websites/            # Website builder agent
 │
-├── root/                    # Kimi's root filesystem analysis
-│   ├── app/                 # Application scripts
-│   ├── browser-guard.md     # Browser automation analysis
-│   ├── jupyter-kernel.md    # Kernel analysis
-│   └── ...
-│
-├── skills/                  # Skill system documentation
-│   ├── docx/                # Word generation skill
-│   ├── pdf/                 # PDF generation skill
-│   ├── webapp/              # WebApp skill
-│   ├── xlsx/                # Excel skill
-│   └── skill-system.md      # Skills framework overview
-│
-├── system/                  # System-wide architecture
-│   ├── architecture.md      # Shell-Operator paradigm analysis
-│   ├── infra.md             # Infrastructure analysis
-│   └── security.md          # Security notes
+├── analysis/                # System analysis and documentation
+│   ├── runtime/             # Kimi's root filesystem analysis
+│   │   ├── app/             # Application scripts
+│   │   ├── browser-guard.md # Browser automation analysis
+│   │   ├── jupyter-kernel.md # Kernel analysis
+│   │   └── ...
+│   │
+│   ├── skills/              # Skill system documentation
+│   │   ├── docx/            # Word generation skill
+│   │   ├── pdf/             # PDF generation skill
+│   │   ├── webapp/          # WebApp skill
+│   │   ├── xlsx/            # Excel skill
+│   │   └── skill-system.md  # Skills framework overview
+│   │
+│   └── architecture/        # System-wide architecture
+│       ├── architecture.md  # Shell-Operator paradigm analysis
+│       ├── infra.md         # Infrastructure analysis
+│       └── security.md      # Security notes
 │
 ├── KIMI_AGENTS_EXPLAINED.md # Deep dive into agent types
 ├── KIMI_FILESYSTEM.md       # Filesystem structure analysis

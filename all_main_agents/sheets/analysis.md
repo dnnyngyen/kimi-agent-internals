@@ -56,13 +56,13 @@ for sheet in workbook:
 
 **CRITICAL WORKFLOW CONSTRAINT**:
 ```
-✅ CORRECT:
+CORRECT:
    openpyxl creates base.xlsx (all sheets)
    → pivot command (adds PivotTable)
    → validate
    → DELIVER (do NOT modify again)
 
-❌ WRONG:
+WRONG:
    pivot creates pivot.xlsx
    → openpyxl opens to add Cover sheet  ← CORRUPTS pivotCache!
    → File broken
@@ -105,10 +105,10 @@ wb.save('/mnt/okcomputer/output/data.xlsx')
 
 **Formula Mandate**: The skill requires Excel formulas, not calculated values:
 ```python
-# ✅ CORRECT
+# CORRECT
 ws['C2'] = '=A2+B2'
 
-# ❌ FORBIDDEN
+# FORBIDDEN
 result = value_a + value_b
 ws['C2'] = result    # Static value - violates skill principles
 ```
