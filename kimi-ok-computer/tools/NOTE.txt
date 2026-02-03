@@ -1,0 +1,5 @@
+NOTES:
+
+1. The "mshtools-" prefix most likely stands for "Moonshot Tools"
+
+2. All agents (OK Computer, Docs, Sheets, Websites, Slides) use the same tools. (See file [KIMI_AGENTS_EXPLAINED.md] at repo root.
