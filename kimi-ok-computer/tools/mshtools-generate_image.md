@@ -51,7 +51,7 @@ AI image generation from text descriptions using diffusion model. Supports multi
 ## Integration Architecture
 
 ### Model Backend
-- **Provider**: Internal image generation service
+- **Provider**: External image generation service (Kimi models can't generate images) Most likely Nano🍌
 - **Model**: Diffusion-based (specific architecture not exposed)
 - **Compute**: GPU-accelerated inference
 - **Queue**: Synchronous execution (waits for completion)
