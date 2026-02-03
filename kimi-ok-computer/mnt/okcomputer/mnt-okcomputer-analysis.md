@@ -5,7 +5,7 @@
 
 ## Executive Summary
 
-`/mnt/okcomputer/` serves as the primary working directory for the Kimi agent system. It contains deployment artifacts, output files, and upload storage. This directory is the current working directory for the agent process.
+`/mnt/okcomputer/` serves as the primary working directory for the Kimi agents including Docs, Sheets, Website, and Slides. It contains deployment artifacts, output files, and upload storage. This directory is the current working directory for the agent process.
 
 ---
 
