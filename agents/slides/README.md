@@ -5,4 +5,4 @@
 > Tools: Same 23 mshtools as OK Computer (see `tools/tools.json`)
 > Skill: Slides (Presentation generation with templates, styling, layout)
 >
-> See [artifacts/README.md](../artifacts/README.md) for architecture overview and [../findings/scaffolding-vs-persona.md](../findings/scaffolding-vs-persona.md) for analysis of persona-based prompting.
+> See [artifacts-sample/README.md](../artifacts-sample/README.md) for architecture overview and [../findings/scaffolding-vs-persona.md](../findings/scaffolding-vs-persona.md) for analysis of persona-based prompting.

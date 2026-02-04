@@ -6,4 +6,4 @@
 > - **Slides agent** = OK Computer + slides-skill injection (with custom prompt variant)
 > - **Websites agent** = OK Computer + webapp-skill injection
 >
-> See [artifacts/README.md](../README.md) for architecture overview.
+> See [artifacts-sample/README.md](../artifacts-sample/README.md) for architecture overview.

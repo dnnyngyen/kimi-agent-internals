@@ -12,7 +12,7 @@ For agent prompts, system instructions, and how they're organized, see the top-l
 - 6 agent types: Base Chat, OK Computer, Docs, Sheets, Slides, Websites
 - Each has `prompt.md`, `README.md`, and optional `memory.txt`
 
-For tool documentation (8 tools for Base Chat, 31 mshtools for OK Computer), see [`../tools/`](../tools/)
+For tool documentation (8 tools for Base Chat, 31 mshtools for OK Computer), see [`../agents/tools/`](../agents/tools/)
 
 ---
 
@@ -73,7 +73,7 @@ All specialized agents use the same 23 tools, but their system prompts differ to
 
 ## Skills Definitions
 
-The `skills/` subdirectory contains SKILL.md definitions for each skill system:
+The skill definitions are located in [`../agents/skills/`](../agents/skills/):
 - `docx/SKILL.md` - DOCX skill definition
 - `pdf/SKILL.md` - PDF skill definition
 - `webapp/SKILL.md` - WebApp skill definition
@@ -87,9 +87,9 @@ For detailed skill analysis and workflows, see [`../reference/docx-skill/`](../r
 
 1. **Want to understand how agents work?** Start with [`../agents/*/prompt.md`](../agents/)
 2. **What can agents do?** Each agent has a prompt with tool capabilities
-3. **How do specific tools work?** See [`../tools/base-chat/`](../tools/base-chat/) or [`../tools/ok-computer/`](../tools/ok-computer/)
+3. **How do specific tools work?** See [`../agents/tools/base-chat/`](../agents/tools/base-chat/) or [`../agents/tools/ok-computer/`](../agents/tools/ok-computer/)
 4. **Want to see actual code?** Browse [`source/`](source/)
-5. **Need skill definitions?** See [`skills/*/SKILL.md`](skills/)
+5. **Need skill definitions?** See [`../agents/skills/*/SKILL.md`](../agents/skills/)
 
 ---
 

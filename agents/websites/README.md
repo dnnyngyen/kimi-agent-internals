@@ -5,4 +5,4 @@
 > Tools: Same 23 mshtools as OK Computer (see `tools/tools.json`)
 > Skill: WebApp (React + TypeScript + Tailwind CSS website generation with 50+ UI components)
 >
-> See [artifacts/README.md](../artifacts/README.md) for architecture overview and [../reference/webapp-skill/webapp-skill-workflow.md](../reference/webapp-skill/webapp-skill-workflow.md) for skill details.
+> See [artifacts-sample/README.md](../artifacts-sample/README.md) for architecture overview and [../reference/webapp-skill/webapp-skill-workflow.md](../reference/webapp-skill/webapp-skill-workflow.md) for skill details.

@@ -5,4 +5,4 @@
 > Tools: Same 23 mshtools as OK Computer (see `tools/tools.json`)
 > Skill: XLSX (Excel spreadsheet generation with validation, pivot tables, styling)
 >
-> See [artifacts/README.md](../artifacts/README.md) for architecture overview and [../reference/xlsx-skill/xlsx-skill-workflow.md](../reference/xlsx-skill/xlsx-skill-workflow.md) for skill details.
+> See [artifacts-sample/README.md](../artifacts-sample/README.md) for architecture overview and [../reference/xlsx-skill/xlsx-skill-workflow.md](../reference/xlsx-skill/xlsx-skill-workflow.md) for skill details.

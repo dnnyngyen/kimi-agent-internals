@@ -69,4 +69,4 @@ agent-taxonomy.md (foundation)
 
 - **Want to see the prompts?** Go to [../agents/](../agents/)
 - **Interested in technical deep-dives?** Check [../reference/](../reference/)
-- **Need tool documentation?** See [../tools/](../tools/)
+- **Need tool documentation?** See [../agents/tools/](../agents/tools/)

@@ -20,89 +20,94 @@ Agents have begun to evolve beyond "Tool-Use Architectures" (providing models wi
 ```
 kimi-k2.5-system-analysis/
 │
-├── agents/                                # AGENT CONFIGURATIONS
-│   ├── base-chat/                         # Base chat agent
+├── agents/                                # AGENT CONFIGURATIONS & SKILLS
+│   ├── base-chat/
 │   │   ├── README.md
 │   │   ├── prompt.md
 │   │   └── memory.txt
-│   ├── ok-computer/                       # OK Computer agent (environment architecture)
+│   ├── ok-computer/
 │   │   ├── README.md
 │   │   └── prompt.md
-│   ├── docs/                              # Docs agent (OK Computer + docx-skill)
+│   ├── docs/
 │   │   ├── README.md
 │   │   └── prompt.md
-│   ├── sheets/                            # Sheets agent (OK Computer + xlsx-skill)
+│   ├── sheets/
 │   │   ├── README.md
 │   │   └── prompt.md
-│   ├── slides/                            # Slides agent (OK Computer + slides-skill)
+│   ├── slides/
 │   │   ├── README.md
 │   │   └── prompt.md
-│   └── websites/                          # Websites agent (OK Computer + webapp-skill)
-│       ├── README.md
-│       └── prompt.md
+│   ├── websites/
+│   │   ├── README.md
+│   │   └── prompt.md
+│   │
+│   ├── skills/                            # Skill definitions & implementations
+│   │   ├── docx/
+│   │   │   └── SKILL.md                   # DOCX skill definition
+│   │   ├── pdf/
+│   │   │   ├── SKILL.md
+│   │   │   └── routes/
+│   │   │       ├── html.md
+│   │   │       ├── latex.md
+│   │   │       └── process.md
+│   │   ├── webapp/
+│   │   │   └── SKILL.md
+│   │   └── xlsx/
+│   │       ├── SKILL.md
+│   │       └── pivot-table.md
+│   │
+│   └── tools/                             # Tool documentation (organized by agent)
+│       ├── base-chat/                     # Base chat tools (9 tools)
+│       └── ok-computer/                   # OK Computer tools (31 mshtools)
 │
 ├── findings/                              # YOUR INSIGHTS & ANALYSIS
-│   ├── README.md                          # Index & reading guide
-│   ├── agent-taxonomy.md                  # Agent types & paradigm shift
-│   ├── architecture-overview.md           # System architecture & Shell-Operator paradigm
-│   ├── base-chat-vs-okcomputer.md         # Comparison of two agent types
-│   └── scaffolding-vs-persona.md          # Slides agent analysis
+│   ├── README.md
+│   ├── agent-taxonomy.md
+│   ├── architecture-overview.md
+│   ├── base-chat-vs-okcomputer.md
+│   └── scaffolding-vs-persona.md
 │
 ├── reference/                             # TECHNICAL ANALYSIS & LOOKUP
-│   ├── README.md (if exists)              # Reference index
-│   ├── browser-guard.md                   # Browser automation system
-│   ├── chrome-data.md                     # Chrome browser profile
-│   ├── container-infrastructure.md        # Infrastructure & containerization
-│   ├── filesystem-full.md                 # Complete filesystem structure
-│   ├── jupyter-kernel.md                  # Jupyter kernel implementation
-│   ├── kernel-server.md                   # Kernel server
-│   ├── pdf-viewer.md                      # PDF viewer extension
-│   ├── security-model.md                  # Security architecture
-│   ├── skill-system.md                    # Skills framework overview
-│   ├── skills-analysis.md                 # System-wide skills analysis
-│   ├── supporting-directories.md          # Supporting directory docs
-│   ├── tectonic.md                        # Tectonic PDF engine
-│   ├── tool-dependency-maps.md            # Tool dependency analysis
-│   ├── utils.md                           # Utility analysis
-│   ├── workspace-mnt-kimi.md              # /mnt/kimi workspace analysis
-│   ├── workspace-mnt-okcomputer.md        # /mnt/okcomputer workspace analysis
-│   ├── docx-skill/                        # Word skill analysis
+│   ├── browser-guard.md
+│   ├── chrome-data.md
+│   ├── container-infrastructure.md
+│   ├── filesystem-full.md
+│   ├── jupyter-kernel.md
+│   ├── kernel-server.md
+│   ├── pdf-viewer.md
+│   ├── security-model.md
+│   ├── skill-system.md
+│   ├── skills-analysis.md
+│   ├── supporting-directories.md
+│   ├── tectonic.md
+│   ├── tool-dependency-maps.md
+│   ├── utils.md
+│   ├── workspace-mnt-kimi.md
+│   ├── workspace-mnt-okcomputer.md
+│   ├── docx-skill/
 │   │   ├── docx-skill-analysis.md
 │   │   ├── docx-skill-workflow.md
 │   │   ├── docx-scripts-analysis.md
 │   │   ├── docx-templates-analysis.md
 │   │   └── docx-validator-analysis.md
-│   ├── pdf-skill/                         # PDF skill analysis
+│   ├── pdf-skill/
 │   │   ├── pdf-skill-analysis.md
 │   │   └── scripts-analysis.md
-│   ├── webapp-skill/                      # Web app skill analysis
+│   ├── webapp-skill/
 │   │   ├── webapp-skill-analysis.md
 │   │   ├── webapp-skill-workflow.md
 │   │   └── webapp-templates-analysis.md
-│   └── xlsx-skill/                        # Excel skill analysis
+│   └── xlsx-skill/
 │       ├── xlsx-skill-analysis.md
 │       └── xlsx-skill-workflow.md
 │
-├── tools/                                 # TOOL DOCUMENTATION (organized by agent)
-│   ├── base-chat/                         # Base chat tools (9 tools)
-│   └── ok-computer/                       # OK Computer tools (31 mshtools)
-│
-├── artifacts/                             # EXTRACTED PRIMARY SOURCES
+├── artifacts-sample/                      # EXTRACTED PRIMARY SOURCES
 │   ├── README.md
-│   ├── source/                            # Extracted Python source code
-│   │   ├── browser_guard.py               # Browser automation
-│   │   ├── jupyter_kernel.py              # Kernel implementation
-│   │   ├── kernel_server.py               # Kernel server
-│   │   └── utils.py                       # Utilities
-│   └── skills/                            # Skill definitions & implementations
-│       ├── docx/
-│       │   └── SKILL.md                   # DOCX skill definition
-│       ├── pdf/
-│       │   └── SKILL.md                   # PDF skill definition
-│       ├── webapp/
-│       │   └── SKILL.md                   # WebApp skill definition
-│       └── xlsx/
-│           └── SKILL.md                   # XLSX skill definition
+│   └── source/                            # Extracted Python source code
+│       ├── browser_guard.py
+│       ├── jupyter_kernel.py
+│       ├── kernel_server.py
+│       └── utils.py
 │
 ├── README.md                              # This file
 ├── METHODOLOGY.md                         # Research methodology
@@ -114,7 +119,8 @@ kimi-k2.5-system-analysis/
 - **New to Kimi?** Start with [findings/agent-taxonomy.md](findings/agent-taxonomy.md) to understand the two agent types.
 - **Want system architecture?** Read [findings/architecture-overview.md](findings/architecture-overview.md) and [reference/container-infrastructure.md](reference/container-infrastructure.md).
 - **Looking for specific agent prompts?** Browse [agents/](agents/).
-- **Need tool documentation?** Check [tools/](tools/).
+- **Need tool documentation?** Check [agents/tools/](agents/tools/).
+- **Want to see skill definitions?** Browse [agents/skills/](agents/skills/).
 - **Interested in technical deep-dives?** See [reference/](reference/).
 - **Exploring the filesystem?** Start with [reference/filesystem-full.md](reference/filesystem-full.md).
 
