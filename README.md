@@ -129,7 +129,7 @@ System prompts for six agent types: Base Chat, OK Computer, Docs, Sheets, Slides
 
 **Tool Budget Matters More Than Model Size**
 
-The same model with a persistent filesystem and 300 tool calls produces deliverables. The same model in a chat window with 10 calls answers questions. The difference is infrastructure, not intelligence.
+The same model with a persistent filesystem and 50 tool calls produces deliverables. The same model in a chat window with 10 calls answers questions. The difference is infrastructure, not intelligence.
 
 **Skills Beat Fine-Tuning**
 
