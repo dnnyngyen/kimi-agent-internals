@@ -79,7 +79,7 @@ The skill definitions are located in [`../agents/skills/`](../agents/skills/):
 - `webapp/SKILL.md` - WebApp skill definition
 - `xlsx/SKILL.md` - XLSX skill definition
 
-For detailed skill analysis and workflows, see [`../reference/docx-skill-docs/`](../reference/docx-skill-docs/), [`../reference/pdf-skill-docs/`](../reference/pdf-skill-docs/), [`../reference/webapp-skill-docs/`](../reference/webapp-skill-docs/), [`../reference/xlsx-skill-docs/`](../reference/xlsx-skill-docs/).
+For detailed skill analysis and workflows, see [`../reference/skills/docx/`](../reference/skills/docx/), [`../reference/skills/pdf/`](../reference/skills/pdf/), [`../reference/skills/webapp/`](../reference/skills/webapp/), [`../reference/skills/xlsx/`](../reference/skills/xlsx/).
 
 ---
 
@@ -96,6 +96,6 @@ For detailed skill analysis and workflows, see [`../reference/docx-skill-docs/`]
 ## Cross-References
 
 - **For agent comparisons:** See [`../findings/base-chat-vs-okcomputer.md`](../findings/base-chat-vs-okcomputer.md)
-- **For skill analysis & workflows:** See [`../reference/`](../reference/) (docx-skill/, pdf-skill/, webapp-skill/, xlsx-skill/)
+- **For skill analysis & workflows:** See [`../reference/skills/`](../reference/skills/) (docx/, pdf/, webapp/, xlsx/)
 - **For system architecture:** See [`../findings/architecture-overview.md`](../findings/architecture-overview.md)
 - **For agent prompts:** See [`../agents/`](../agents/)

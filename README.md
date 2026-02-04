@@ -8,7 +8,7 @@ Agents have begun to evolve beyond "Tool-Use Architectures" (providing models wi
 ### Quickstart:
 
 1. **[findings/agent-taxonomy.md](findings/agent-taxonomy.md)** - Understand the difference between Kimi Chat (tool-use) and OK Computer (agentic environment).
-2. **[reference/filesystem-full.md](reference/filesystem-full.md)** - Explore the persistent filesystem, skill storage, and runtime structure.
+2. **[reference/infrastructure/filesystem-full.md](reference/infrastructure/filesystem-full.md)** - Explore the persistent filesystem, skill storage, and runtime structure.
 3. **[findings/](findings/README.md)** - Read the index for key insights and findings.
 4. **[agents/](agents/)** - Browse agent prompts and tool documentation.
 
@@ -68,38 +68,49 @@ kimi-k2.5-system-analysis/
 │   └── scaffolding-vs-persona.md
 │
 ├── reference/                             # TECHNICAL ANALYSIS & LOOKUP
-│   ├── browser-guard.md
-│   ├── chrome-data.md
-│   ├── container-infrastructure.md
-│   ├── filesystem-full.md
-│   ├── jupyter-kernel.md
-│   ├── kernel-server.md
-│   ├── pdf-viewer.md
-│   ├── security-model.md
-│   ├── skill-system.md
-│   ├── skills-analysis.md
-│   ├── supporting-directories.md
-│   ├── tectonic.md
-│   ├── tool-dependency-maps.md
-│   ├── utils.md
-│   ├── workspace-mnt-kimi.md
-│   ├── workspace-mnt-okcomputer.md
-│   ├── docx-skill-docs/
-│   │   ├── docx-skill-analysis.md
-│   │   ├── docx-skill-workflow.md
-│   │   ├── docx-scripts-analysis.md
-│   │   ├── docx-templates-analysis.md
-│   │   └── docx-validator-analysis.md
-│   ├── pdf-skill-docs/
-│   │   ├── pdf-skill-analysis.md
-│   │   └── scripts-analysis.md
-│   ├── webapp-skill-docs/
-│   │   ├── webapp-skill-analysis.md
-│   │   ├── webapp-skill-workflow.md
-│   │   └── webapp-templates-analysis.md
-│   └── xlsx-skill-docs/
-│       ├── xlsx-skill-analysis.md
-│       └── xlsx-skill-workflow.md
+│   ├── README.md
+│   ├── runtime/
+│   │   ├── README.md
+│   │   ├── browser-guard.md
+│   │   ├── chrome-data.md
+│   │   ├── jupyter-kernel.md
+│   │   ├── kernel-server.md
+│   │   ├── pdf-viewer.md
+│   │   └── utils.md
+│   ├── system-architecture/
+│   │   ├── README.md
+│   │   ├── skill-system.md
+│   │   ├── skills-analysis.md
+│   │   └── tool-dependency-maps.md
+│   ├── infrastructure/
+│   │   ├── README.md
+│   │   ├── container-infrastructure.md
+│   │   ├── filesystem-full.md
+│   │   ├── supporting-directories.md
+│   │   ├── tectonic.md
+│   │   ├── workspace-mnt-kimi.md
+│   │   └── workspace-mnt-okcomputer.md
+│   ├── security/
+│   │   ├── README.md
+│   │   └── security-model.md
+│   └── skills/
+│       ├── README.md
+│       ├── docx/
+│       │   ├── docx-skill-analysis.md
+│       │   ├── docx-skill-workflow.md
+│       │   ├── docx-scripts-analysis.md
+│       │   ├── docx-templates-analysis.md
+│       │   └── docx-validator-analysis.md
+│       ├── pdf/
+│       │   ├── pdf-skill-analysis.md
+│       │   └── scripts-analysis.md
+│       ├── webapp/
+│       │   ├── webapp-skill-analysis.md
+│       │   ├── webapp-skill-workflow.md
+│       │   └── webapp-templates-analysis.md
+│       └── xlsx/
+│           ├── xlsx-skill-analysis.md
+│           └── xlsx-skill-workflow.md
 │
 ├── artifacts-sample/                      # EXTRACTED PRIMARY SOURCES
 │   ├── README.md
@@ -117,12 +128,12 @@ kimi-k2.5-system-analysis/
 ## How to Navigate This Repository
 
 - **New to Kimi?** Start with [findings/agent-taxonomy.md](findings/agent-taxonomy.md) to understand the two agent types.
-- **Want system architecture?** Read [findings/architecture-overview.md](findings/architecture-overview.md) and [reference/container-infrastructure.md](reference/container-infrastructure.md).
+- **Want system architecture?** Read [findings/architecture-overview.md](findings/architecture-overview.md) and [reference/infrastructure/container-infrastructure.md](reference/infrastructure/container-infrastructure.md).
 - **Looking for specific agent prompts?** Browse [agents/](agents/).
 - **Need tool documentation?** Check [agents/tools/](agents/tools/).
 - **Want to see skill definitions?** Browse [agents/skills/](agents/skills/).
 - **Interested in technical deep-dives?** See [reference/](reference/).
-- **Exploring the filesystem?** Start with [reference/filesystem-full.md](reference/filesystem-full.md).
+- **Exploring the filesystem?** Start with [reference/infrastructure/filesystem-full.md](reference/infrastructure/filesystem-full.md).
 
 ---
 
