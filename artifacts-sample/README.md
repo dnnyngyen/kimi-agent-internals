@@ -79,7 +79,7 @@ The skill definitions are located in [`../agents/skills/`](../agents/skills/):
 - `webapp/SKILL.md` - WebApp skill definition
 - `xlsx/SKILL.md` - XLSX skill definition
 
-For detailed skill analysis and workflows, see [`../reference/docx-skill/`](../reference/docx-skill/), [`../reference/pdf-skill/`](../reference/pdf-skill/), etc.
+For detailed skill analysis and workflows, see [`../reference/docx-skill-docs/`](../reference/docx-skill-docs/), [`../reference/pdf-skill-docs/`](../reference/pdf-skill-docs/), [`../reference/webapp-skill-docs/`](../reference/webapp-skill-docs/), [`../reference/xlsx-skill-docs/`](../reference/xlsx-skill-docs/).
 
 ---
 

@@ -84,20 +84,20 @@ kimi-k2.5-system-analysis/
 │   ├── utils.md
 │   ├── workspace-mnt-kimi.md
 │   ├── workspace-mnt-okcomputer.md
-│   ├── docx-skill/
+│   ├── docx-skill-docs/
 │   │   ├── docx-skill-analysis.md
 │   │   ├── docx-skill-workflow.md
 │   │   ├── docx-scripts-analysis.md
 │   │   ├── docx-templates-analysis.md
 │   │   └── docx-validator-analysis.md
-│   ├── pdf-skill/
+│   ├── pdf-skill-docs/
 │   │   ├── pdf-skill-analysis.md
 │   │   └── scripts-analysis.md
-│   ├── webapp-skill/
+│   ├── webapp-skill-docs/
 │   │   ├── webapp-skill-analysis.md
 │   │   ├── webapp-skill-workflow.md
 │   │   └── webapp-templates-analysis.md
-│   └── xlsx-skill/
+│   └── xlsx-skill-docs/
 │       ├── xlsx-skill-analysis.md
 │       └── xlsx-skill-workflow.md
 │
