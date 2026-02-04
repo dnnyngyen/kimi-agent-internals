@@ -1,213 +1,47 @@
-# Kimi K2.5 System Analysis (Prompts + Tools + Skills)
+# Kimi K2.5 System Analysis
 
-**Abstract:**
-Agents have begun to evolve beyond "Tool-Use Architectures" (providing models with discrete APIs) into "Environment Architectures" (providing models with general-purpose computing contexts). This repository explores how Moonshot AI's Kimi K2.5 agent system represents a paradigm shift from the former to the latter.
+This is a reverse-engineered analysis of Moonshot AI's Kimi K2.5 agent architecture. I extracted this by using the agent's own tools to read its system prompts, explore its container filesystem, and observe its behavior. No authentication was bypassed. No binaries were decompiled. Everything here was visible to a regular user with patience and curiosity.
 
----
-
-### Quickstart:
-
-1. **[findings/agent-taxonomy.md](findings/agent-taxonomy.md)** - Understand the difference between Kimi Chat (tool-use) and OK Computer (agentic environment).
-2. **[reference/infrastructure/filesystem-full.md](reference/infrastructure/filesystem-full.md)** - Explore the persistent filesystem, skill storage, and runtime structure.
-3. **[findings/](findings/README.md)** - Read the index for key insights and findings.
-4. **[agents/](agents/)** - Browse agent prompts and tool documentation.
-
+The central finding: Kimi has shifted from tool-use architectures to environment architectures. Instead of giving the model discrete APIs, it gives the model general-purpose computing contexts. Persistent filesystems. Browser automation. Process execution. The model becomes an operating system user rather than an API consumer.
 
 ---
 
-## Repository Structure
+## What this repository contains
 
-```
-kimi-k2.5-system-analysis/
-│
-├── agents/                                # AGENT CONFIGURATIONS & SKILLS
-│   ├── base-chat/
-│   │   ├── README.md
-│   │   ├── prompt.md
-│   │   └── memory.txt
-│   ├── ok-computer/
-│   │   ├── README.md
-│   │   └── prompt.md
-│   ├── docs/
-│   │   ├── README.md
-│   │   └── prompt.md
-│   ├── sheets/
-│   │   ├── README.md
-│   │   └── prompt.md
-│   ├── slides/
-│   │   ├── README.md
-│   │   └── prompt.md
-│   ├── websites/
-│   │   ├── README.md
-│   │   └── prompt.md
-│   │
-│   ├── skills/                            # Skill definitions & implementations
-│   │   ├── docx/
-│   │   │   └── SKILL.md                   # DOCX skill definition
-│   │   ├── pdf/
-│   │   │   ├── SKILL.md
-│   │   │   └── routes/
-│   │   │       ├── html.md
-│   │   │       ├── latex.md
-│   │   │       └── process.md
-│   │   ├── webapp/
-│   │   │   └── SKILL.md
-│   │   └── xlsx/
-│   │       ├── SKILL.md
-│   │       └── pivot-table.md
-│   │
-│   └── tools/                             # Tool documentation (organized by agent)
-│       ├── base-chat/                     # Base chat tools (9 tools)
-│       └── ok-computer/                   # OK Computer tools (31 mshtools)
-│
-├── findings/                              # YOUR INSIGHTS & ANALYSIS
-│   ├── README.md
-│   ├── agent-taxonomy.md
-│   ├── architecture-overview.md
-│   ├── base-chat-vs-okcomputer.md
-│   └── scaffolding-vs-persona.md
-│
-├── reference/                             # TECHNICAL ANALYSIS & LOOKUP
-│   ├── README.md
-│   ├── runtime/
-│   │   ├── README.md
-│   │   ├── browser-guard.md
-│   │   ├── chrome-data.md
-│   │   ├── jupyter-kernel.md
-│   │   ├── kernel-server.md
-│   │   ├── pdf-viewer.md
-│   │   └── utils.md
-│   ├── system-architecture/
-│   │   ├── README.md
-│   │   ├── skill-system.md
-│   │   ├── skills-analysis.md
-│   │   └── tool-dependency-maps.md
-│   ├── infrastructure/
-│   │   ├── README.md
-│   │   ├── container-infrastructure.md
-│   │   ├── filesystem-full.md
-│   │   ├── supporting-directories.md
-│   │   ├── tectonic.md
-│   │   ├── workspace-mnt-kimi.md
-│   │   └── workspace-mnt-okcomputer.md
-│   ├── security/
-│   │   ├── README.md
-│   │   └── security-model.md
-│   └── skills-analysis/
-│       ├── README.md
-│       ├── docx/
-│       │   ├── docx-skill-analysis.md
-│       │   ├── docx-skill-workflow.md
-│       │   ├── docx-scripts-analysis.md
-│       │   ├── docx-templates-analysis.md
-│       │   └── docx-validator-analysis.md
-│       ├── pdf/
-│       │   ├── pdf-skill-analysis.md
-│       │   └── scripts-analysis.md
-│       ├── webapp/
-│       │   ├── webapp-skill-analysis.md
-│       │   ├── webapp-skill-workflow.md
-│       │   └── webapp-templates-analysis.md
-│       └── xlsx/
-│           ├── xlsx-skill-analysis.md
-│           └── xlsx-skill-workflow.md
-│
-├── artifacts-sample/                      # EXTRACTED PRIMARY SOURCES
-│   ├── README.md
-│   └── source/                            # Extracted Python source code
-│       ├── browser_guard.py
-│       ├── jupyter_kernel.py
-│       ├── kernel_server.py
-│       └── utils.py
-│
-├── README.md                              # This file
-├── METHODOLOGY.md                         # Research methodology
-└── LICENSE                                # CC BY 4.0
-```
-
-## How to Navigate This Repository
-
-- **New to Kimi?** Start with [findings/agent-taxonomy.md](findings/agent-taxonomy.md) to understand the two agent types.
-- **Want system architecture?** Read [findings/architecture-overview.md](findings/architecture-overview.md) and [reference/infrastructure/container-infrastructure.md](reference/infrastructure/container-infrastructure.md).
-- **Looking for specific agent prompts?** Browse [agents/](agents/).
-- **Need tool documentation?** Check [agents/tools/](agents/tools/).
-- **Want to see skill definitions?** Browse [agents/skills/](agents/skills/).
-- **Interested in technical deep-dives?** See [reference/](reference/).
-- **Exploring the filesystem?** Start with [reference/infrastructure/filesystem-full.md](reference/infrastructure/filesystem-full.md).
+System prompts for six agent types: Base Chat, OK Computer, Docs, Sheets, Slides, and Websites. Skill definitions for DOCX, XLSX, PDF, and WebApp output formats. Tool schemas documenting 37 distinct tools. Source code for the runtime environment. Technical analysis of the architecture, security model, and design patterns.
 
 ---
 
-## High-Level Architecture:
+## How to navigate this
 
-```mermaid
+Start with `analysis/how-kimi-works.md` for the architectural overview. It explains the eight agent types, the skill system, and why Slides uses a different pattern than the other specialized agents.
 
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e9d5ff', 'primaryTextColor': '#1e293b', 'primaryBorderColor': '#c084fc', 'lineColor': '#94a3b8', 'secondaryColor': '#f1f5f9', 'tertiaryColor': '#e0e7ff', 'background': '#ffffff', 'mainBkg': '#ffffff', 'textColor': '#334155', 'nodeBorder': '#cbd5e1'}}}%%
-flowchart LR
-    subgraph UI["🎯 USER INTERFACE LAYER"]
-        direction TB
-        NL["💬 Natural Language Requests"]
-    end
+Read `GLOSSARY.md` for definitions of terms like skill injection, persona replacement, and scaffolding.
 
-    subgraph ORCH["🧠 ORCHESTRATION LAYER"]
-        direction TB
-        IC["🔍 Intent Classification"]
-        RT["🚦 Tool Routing"]
-    end
+Compare `prompts/base-chat.md` and `prompts/ok-computer.md` to see how the same model becomes dramatically more capable through infrastructure changes.
 
-    subgraph SERVICES["⚙️ CORE SERVICES"]
-        direction TB
-        KS["🏛️ kernel_server.py<br/>Port 8888 • 10KB"]
-        JK["⚙️ jupyter_kernel.py<br/>PID 300-400 • 17KB"]
-        BG["🛡️ browser_guard.py<br/>Port 9222/9223 • 41KB"]
-        UT["🔧 utils.py<br/>1.2KB"]
-    end
+Look at `skills/docx/SKILL.md` for an example of a production skill definition. This is what the agent reads before generating a Word document.
 
-    subgraph SKILLS["📚 SKILL SYSTEM"]
-        direction TB
-        DOCX["📄 DOCX Skill<br/>Validator .NET • 73KB"]
-        XLSX["📊 XLSX Skill<br/>KimiXlsx Binary • 77MB"]
-        PDF["📕 PDF Skill<br/>Tectonic • 57MB"]
-        WEB["🌐 WebApp Skill<br/>React Template"]
-    end
-
-    subgraph DATA["🌍 DATA SOURCES"]
-        direction TB
-        YF["💰 yahoo_finance"]
-        WB["🏛️ world_bank"]
-        AR["📚 arxiv"]
-        GS["🎓 google_scholar"]
-    end
-
-    subgraph INFRA["🏗️ RUNTIME INFRASTRUCTURE"]
-        direction TB
-        CD["🗂️ chrome_data/<br/>Browser Profile (272 files)"]
-        PV["👁️ pdf-viewer/<br/>Extension (387 files)"]
-        WS["📁 /mnt/kimi/<br/>upload(RO) • output(RW)"]
-    end
-
-    UI --> ORCH
-    ORCH --> SERVICES
-    ORCH --> SKILLS
-    ORCH --> DATA
-    SERVICES --> INFRA
-    SKILLS --> INFRA
-
-    style UI fill:#e9d5ff,stroke:#c084fc,stroke-width:2px,color:#1e293b
-    style ORCH fill:#fbcfe8,stroke:#f472b6,stroke-width:2px,color:#1e293b
-    style SERVICES fill:#bae6fd,stroke:#38bdf8,stroke-width:2px,color:#1e293b
-    style SKILLS fill:#bbf7d0,stroke:#4ade80,stroke-width:2px,color:#1e293b
-    style DATA fill:#fde68a,stroke:#fbbf24,stroke-width:2px,color:#1e293b
-    style INFRA fill:#e2e8f0,stroke:#94a3b8,stroke-width:2px,color:#1e293b
-```
+For deep technical details, see `deep-dives/`. The container architecture, filesystem inventory, browser automation framework, and security model are documented there.
 
 ---
 
-**Methodology:** Cleanroom extraction through the agent's own tools. No authentication was bypassed. No binaries were decompiled. See [METHODOLOGY.md](METHODOLOGY.md) for details.
+## The key insight
+
+Kimi demonstrates that you can separate connectivity from cognition. Connectivity is what the agent can touch: tools, filesystem, browser, execution environment. Cognition is what the agent knows: skills, context, expertise. Connectivity is fixed infrastructure. Cognition is dynamic, loaded at runtime.
+
+The same model with a persistent filesystem and 300 tool calls produces deliverables. The same model in a chat window with 10 calls answers questions. The model did not change. What it could touch changed.
 
 ---
 
-## Legal
+## Methodology
 
-Documentation of publicly observable behavior through standard user interfaces. The agent environment provides these capabilities by design. Independent research, not affiliated with Moonshot AI.
+Cleanroom extraction through the agent's own tools. I asked the agent to read its own prompt files, list directory contents, and show me its environment. Everything documented here was accessible through standard user interfaces. Independent research, not affiliated with Moonshot AI.
 
-CC BY 4.0
+See `METHODOLOGY.md` for details on how this analysis was conducted.
+
+---
+
+## License
+
+CC BY 4.0. See `LICENSE` for details.
