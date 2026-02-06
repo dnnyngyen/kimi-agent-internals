@@ -37,7 +37,7 @@ General-purpose web search capability providing real-time information retrieval 
 
 ### External Dependencies
 - **Search Provider**: Integrated with general web search index
-- **Rate Limiting**: Subject to per-step budget (counts as 1 of 10 steps in Base Chat, 1 of 200-300 in OK Computer)
+- **Rate Limiting**: Subject to per-step budget (counts as 1 of 10 steps in Base Chat, unlimited in OK Computer)
 - **Network Access**: Requires outbound HTTPS to search endpoints
 
 ## Operational Guidelines
@@ -63,5 +63,5 @@ General-purpose web search capability providing real-time information retrieval 
 
 ## System Integration
 - **Base Chat**: Available with 10-step budget per turn
-- **OK Computer**: Available with extended 200-300 step budget per session
+- **OK Computer**: Available with unlimited step budget per session
 - **Citation System**: Integrates with automatic citation rendering using [^N^] format

@@ -63,7 +63,7 @@ Layer 3: Execution Environment - Python 3.x with PyTorch 2.8.0, CUDA 12.8
 - **Memory**: 4GB RAM (CPU-only)
 - **Storage**: 0MB free (containerized, volatile)
 - **Timeout**: 30s execution timeout per call
-- **Step Budget**: Counts as 1 tool call against 10-step (Base) or 200-300 step (OK Computer) limit
+- **Step Budget**: Counts as 1 tool call against 10-step (Base) or unlimited (OK Computer) limit
 
 ## Special Capabilities
 

@@ -23,7 +23,7 @@ Pattern where the entire base prompt is replaced with an expert persona definiti
 Runtime process where the system detects user intent (e.g., "create a Word document") and dynamically loads the relevant SKILL.md content into the context window before execution begins.
 
 ### Budget (Step Budget)
-Maximum number of tool calls/turns an agent can execute before being terminated. Base Chat: 10 steps. OK Computer and specialized agents: 200-300 steps.
+Maximum number of tool calls/turns an agent can execute before being terminated. Base Chat: 10 steps. OK Computer and specialized agents: effectively unlimited.
 
 ## Tool Naming
 

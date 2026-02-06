@@ -19,7 +19,7 @@ Kimi operates in several distinct modes. Four are for basic chat. Four are for a
 
 **Agentic modes** (kimi.com/agent and specialized endpoints):
 
-OK Computer (kimi.com/agent) is the generalist. It has a persistent filesystem, 200 to 300 tool calls per session, and runtime skill injection. This environment and system prompt serve as the base layer for all other Kimi agents.
+OK Computer (kimi.com/agent) is the generalist. It has a persistent filesystem, effectively unlimited tool calls per session, and runtime skill injection. This environment and system prompt serve as the base layer for all other Kimi agents.
 
 Docs (kimi.com/docs), Sheets (kimi.com/sheets), and Websites (kimi.com/websites) are OK Computer with mandatory skill reading appended to the system prompt. Docs forces reading of docx or pdf skills. Sheets mandates xlsx skill. Websites requires webapp skill.
 
@@ -46,7 +46,7 @@ After reading this file, the same shell tool focuses on Excel-specific work. The
 
 The same Kimi model powers two different experiences. Base Chat at kimi.com/chat is conversational. It gets 10 tool calls per turn, no skill loading, and no persistent filesystem. It's a question-answering system.
 
-OK Computer at kimi.com/agent is agentic. It gets 200 to 300 tool calls per session, runtime skill injection, and a persistent workspace. It produces deliverables.
+OK Computer at kimi.com/agent is agentic. It gets effectively unlimited tool calls per session, runtime skill injection, and a persistent workspace. It produces deliverables.
 
 Both modes run on identical infrastructure. `kernel_server.py` manages the control plane. `jupyter_kernel.py` runs the IPython kernel. `browser_guard.py` handles Playwright automation. The difference is configuration: tool budgets, skill loading, and workspace paths.
 
@@ -86,7 +86,7 @@ Kimi's container has a four-layer architecture that everything runs on.
 
 The first layer is the control plane. A FastAPI server on port 8888 manages kernel lifecycle: starting, stopping, and resetting the Python environment. This is how the outer system controls the agent's execution context.
 
-The second layer is the compute engine. An IPython kernel handles code execution, with ZeroMQ for inter-process communication. The kernel has a 10-step budget per turn for Base Chat, 200 to 300 for OK Computer. This is enough for complex tasks but still maintains guardrails.
+The second layer is the compute engine. An IPython kernel handles code execution, with ZeroMQ for inter-process communication. The kernel has a 10-step budget per turn for Base Chat, effectively unlimited for OK Computer. This is enough for complex tasks but still maintains guardrails.
 
 The third layer handles web tools. Playwright drives a Chrome instance for web interactions. The browser runs in stealth mode with anti-detection flags, so the agent can interact with web pages that might block obvious automation.
 

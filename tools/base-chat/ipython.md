@@ -178,7 +178,7 @@ Stateful execution enables multi-turn workflows.
 | Aspect | Base Chat | OK Computer |
 |--------|-----------|-------------|
 | Paths | /mnt/kimi/upload (RO), /mnt/kimi/output (RW) | /mnt/okcomputer/* |
-| Step Budget | 10 per turn | 200-300 per session |
+| Step Budget | 10 per turn | Unlimited per session |
 | Context | No skill files | Skill files available |
 | Todo List | No | Yes |
 | Browser Tools | No (web_open_url only) | Full Playwright suite |

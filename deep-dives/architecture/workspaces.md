@@ -56,13 +56,13 @@ This is the working directory for specialized agents and OK Computer.
 
 **Key Characteristics**
 
-The filesystem and browser state persist across turns. This enables complex multi-step workflows. The tool budget is 200 to 300 steps. The agent has full read-write access. It can create, modify, and delete files. This directory is the agent's working directory. The `deploy/` subdirectory holds web application deployments.
+The filesystem and browser state persist across turns. This enables complex multi-step workflows. The tool budget is effectively unlimited. The agent has full read-write access. It can create, modify, and delete files. This directory is the agent's working directory. The `deploy/` subdirectory holds web application deployments.
 
 ---
 
 ## Comparison
 
-Base Chat targets simple question-answer tasks. OK Computer handles complex multi-step projects. Base Chat gets 10 tool steps. OK Computer gets 200 to 300. Base Chat cannot load skills. OK Computer does this by default.
+Base Chat targets simple question-answer tasks. OK Computer handles complex multi-step projects. Base Chat gets 10 tool steps. OK Computer gets effectively unlimited. Base Chat cannot load skills. OK Computer does this by default.
 
 The Base Chat flow moves from user uploads to the upload directory, through AI processing, to the output directory, then to user downloads. Citation data flows to the `.store/` directory.
 

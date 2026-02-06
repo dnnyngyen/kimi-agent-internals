@@ -29,7 +29,7 @@ General-purpose web search for Base Chat environment. Identical functionality to
 | Aspect | Base Chat | OK Computer |
 |--------|-----------|-------------|
 | Prefix | None | mshtools- |
-| Step Budget | 10 per turn | 200-300 per session |
+| Step Budget | 10 per turn | Unlimited per session |
 | Skill Loading | No | Yes |
 | Filesystem | Limited | Full /mnt/okcomputer |
 

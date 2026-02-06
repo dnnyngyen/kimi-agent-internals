@@ -63,7 +63,7 @@ prompts/
     ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
     │   BASE CHAT     │ │  OK COMPUTER    │ │  SKILL-ENABLED  │
     │                 │ │                 │ │  AGENTS         │
-    │  • 10-step      │ │  • 200-300 step │ │                 │
+    │  • 10-step      │ │  • Unlimited    │ │                 │
     │    budget       │ │    budget       │ │  • Docs Agent   │
     │  • No skills    │ │  • Skill loading│ │  • Sheets Agent │
     │  • Read-only FS │ │  • Full FS      │ │  • Slides Agent │
@@ -112,7 +112,7 @@ Key behavioral instruction: *"You are an AI assistant with a strong attention to
 ### [ok-computer.md](ok-computer.md)
 
 The agentic generalist prompt. Extends Base Chat with:
-- 200-300 step budget
+- Effectively unlimited step budget
 - Full filesystem read-write (`/mnt/okcomputer/`)
 - Persistence across turns
 - 28+ tools including browser automation
@@ -198,11 +198,11 @@ User: "Create a Word document about climate change"
 
 **Base Chat** uses the base prompt only with a 10-step budget, no persistence, no skill loading, 9 tools, and read-only filesystem access.
 
-**OK Computer** uses the base prompt only with a 200-300 step budget, full persistence, dynamic skill loading, 28 plus tools, and read-write filesystem access.
+**OK Computer** uses the base prompt only with effectively unlimited step budget, full persistence, dynamic skill loading, 28 plus tools, and read-write filesystem access.
 
-**Docs, Sheets, and Websites** use skill scaffolding on top of OK Computer with a 200-300 step budget, full persistence, pre-loaded skills, 28 plus tools, and read-write filesystem access.
+**Docs, Sheets, and Websites** use skill scaffolding on top of OK Computer with effectively unlimited step budget, full persistence, pre-loaded skills, 28 plus tools, and read-write filesystem access.
 
-**Slides** uses persona replacement instead of skill scaffolding with a 200-300 step budget, full persistence, 28 plus tools, and read-write filesystem access.
+**Slides** uses persona replacement instead of skill scaffolding with effectively unlimited step budget, full persistence, 28 plus tools, and read-write filesystem access.
 
 ---
 
