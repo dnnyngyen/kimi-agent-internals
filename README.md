@@ -2,7 +2,7 @@
 
 [![License: Mixed](https://img.shields.io/badge/License-CC0%20%2B%20CC%20BY%204.0-blue)](LICENSE)
 [![Type: Research](https://img.shields.io/badge/Type-Research-0366d6)](https://github.com/dnnyngyen/kimi-agent-internals)
-[![Method: Conversational Extraction](https://img.shields.io/badge/Method-Conversational%20Extraction-green)](METHODOLOGY.md)
+[![Method: Conversational Extraction](https://img.shields.io/badge/Method-Conversational%20Extraction-blue)](METHODOLOGY.md)
 [![Repo Size](https://img.shields.io/github/repo-size/dnnyngyen/kimi-agent-internals?label=size&color=58a6ff)](https://github.com/dnnyngyen/kimi-agent-internals)
 [![Last Commit](https://img.shields.io/github/last-commit/dnnyngyen/kimi-agent-internals?color=79c0ff)](https://github.com/dnnyngyen/kimi-agent-internals/commits/main)
 
