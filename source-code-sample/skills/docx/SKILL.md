@@ -1,3 +1,7 @@
+<!-- NOTICE: This file was extracted from the Kimi K2.5 agent environment.
+     Provided in response to plain-English questions. Maintainer does not claim
+     copyright. Included for research under CC0 1.0. See LICENSE for details. -->
+
 ---
 name: docx
 description: Generate and edit Word documents (.docx). Supports professional documents including covers, charts, track-changes editing, and more. Suitable for any .docx creation or modification task.

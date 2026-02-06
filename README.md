@@ -26,7 +26,7 @@
 
 ## Overview
 
-This is an analysis of Moonshot AI's Kimi K2.5 agent architecture and source code. No authentication was bypassed. No binaries were decompiled. Everything here was visible to a regular user with patience and curiosity.
+This is an analysis of Moonshot AI's Kimi K2.5 agent architecture and source code. No authentication was bypassed. No binaries were decompiled. Everything here was provided by the agent itself in response to plain-English questions through standard interfaces.
 
 Kimi shifted from tool-use architectures to skill-based environment architectures. Instead of giving the model discrete APIs, it gives the model general-purpose computing contexts: persistent filesystems, browser automation, and process execution. The model acts as an operating system user rather than an API consumer.
 

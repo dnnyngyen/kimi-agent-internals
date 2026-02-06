@@ -1,3 +1,7 @@
+<!-- NOTICE: This file was extracted from the Kimi K2.5 agent environment.
+     Provided in response to plain-English questions. Maintainer does not claim
+     copyright. Included for research under CC0 1.0. See LICENSE for details. -->
+
 ---
 name: webapp-building
 description: Tools for building modern React webapps with TypeScript, Tailwind CSS and shadcn/ui. Best suited for applications with complex UI components and state management.

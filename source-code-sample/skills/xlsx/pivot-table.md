@@ -1,3 +1,7 @@
+<!-- NOTICE: This file was extracted from the Kimi K2.5 agent environment.
+     Provided in response to plain-English questions. Maintainer does not claim
+     copyright. Included for research under CC0 1.0. See LICENSE for details. -->
+
 name: pivot-table
 description: "Create PivotTables in Excel using the pivot command (pure OpenXML SDK)."
 --

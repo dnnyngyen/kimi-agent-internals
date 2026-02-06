@@ -1,4 +1,11 @@
 #!/usr/bin/env python3
+# ============================================================
+# NOTICE: This file was extracted from the Kimi K2.5 agent
+# environment. Provided in response to plain-English questions.
+# Maintainer does not claim copyright. Included for research
+# under CC0 1.0. See LICENSE for details.
+# ============================================================
+
 """
 Test cases for XML tolerance functions.
 These tests verify that malformed XML (like duplicate attributes) can be handled.
