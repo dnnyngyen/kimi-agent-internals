@@ -20,7 +20,6 @@
 - [Repository Structure](#repository-structure)
 - [Quick Start](#quick-start)
 - [What This Repository Contains](#what-this-repository-contains)
-- [Key Insights](#key-insights)
 - [Methodology](#methodology)
 - [License](#license)
 
@@ -130,22 +129,6 @@ kimi-agent-internals/
 ## What This Repository Contains
 
 System prompts for six agent types: Base Chat, OK Computer, Docs, Sheets, Slides, and Websites. Skill definitions for DOCX, XLSX, PDF, and WebApp output formats. Tool schemas documenting 38 distinct tools. [Source code samples](source-code-sample/) for the runtime environment. Technical analysis of the architecture, security model, and design patterns.
-
----
-
-## Key Insights
-
-**Tool Budget Matters More Than Model Size**
-
-The same model with a persistent filesystem and 50 tool calls produces deliverables. The same model in a chat window with 10 calls answers questions. The difference is infrastructure, not intelligence.
-
-**Skills Beat Fine-Tuning**
-
-Kimi creates a "Sheets Agent" not by training a new model, but by forcing it to read 925 lines of Excel documentation before it starts. Context creates specialization.
-
-**Documentation for Objectivity, Personas for Taste**
-
-Spreadsheets have right answers, so Kimi uses skill files. Presentations require judgment, so Kimi uses a McKinsey consultant persona.
 
 ---
 
