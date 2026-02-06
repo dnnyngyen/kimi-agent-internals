@@ -76,12 +76,12 @@ deep-dives/
 
 Start with [`architecture/container.md`](architecture/container.md) for the overall system picture, then explore specific runtime components based on your interest.
 
-For the skill system and agent behavior, see [`../skills/README.md`](../skills/README.md) and [`../analysis/how-kimi-works.md`](../analysis/how-kimi-works.md).
+For the skill system and agent behavior, see [`../analysis/skills/README.md`](../analysis/skills/README.md) and [`../analysis/how-kimi-works.md`](../analysis/how-kimi-works.md).
 
 ---
 
 ## Related Documentation
 
-- [`../source-code/README.md`](../source-code/README.md) - Python source files analyzed in these deep dives
-- [`../skills/README.md`](../skills/README.md) - Skill system documentation
+- [`../source-code-sample/README.md`](../source-code-sample/README.md) - Python source files analyzed in these deep dives
+- [`../analysis/skills/README.md`](../analysis/skills/README.md) - Skill system documentation
 - [`../analysis/how-kimi-works.md`](../analysis/how-kimi-works.md) - Architectural overview

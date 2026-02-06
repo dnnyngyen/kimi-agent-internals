@@ -19,12 +19,36 @@ Extracted Python runtime code for the Kimi K2.5 agent environment.
 ## File Structure
 
 ```
-source-code/
-├── README.md           # This file
-├── browser_guard.py    # 41KB - Browser automation
-├── jupyter_kernel.py   # 17KB - Code execution
-├── kernel_server.py    # 10KB - Control plane
-└── utils.py            # 1.2KB - Helper functions
+source-code-sample/
+├── README.md              # This file
+├── browser_guard.py       # 41KB - Browser automation
+├── jupyter_kernel.py      # 17KB - Code execution
+├── kernel_server.py       # 10KB - Control plane
+├── utils.py               # 1.2KB - Helper functions
+├── etc/                   # System configuration
+│   ├── chromium/          # Chrome browser settings
+│   │   └── master_preferences
+│   ├── chromium.d/        # Chrome launch flags
+│   │   ├── default-flags
+│   │   └── extensions
+│   └── ImageMagick-6/     # Image processing policy
+│       └── policy.xml
+├── pdf-viewer/            # ~4MB - PDF.js Chrome extension
+│   ├── manifest.json      # Extension manifest (v3)
+│   ├── content/web/       # PDF.js viewer core
+│   │   ├── cmaps/         # CJK character maps (~50 files)
+│   │   ├── standard_fonts/# PDF standard fonts (12 files)
+│   │   └── viewer.html    # Main viewer UI
+│   └── ...
+└── skills/                # Skill system implementation
+    ├── docx/              # Word document generation
+    │   ├── SKILL.md       # Skill documentation
+    │   ├── scripts/       # Python/C# toolchain
+    │   ├── assets/templates/  # C# templates
+    │   └── validator/     # .NET validator configs
+    ├── pdf/               # PDF generation
+    ├── xlsx/              # Excel processing
+    └── webapp-building/   # React webapp template
 ```
 
 ---
@@ -37,6 +61,8 @@ source-code/
 | [`jupyter_kernel.py`](jupyter_kernel.py) | 17KB | IPython kernel for sandboxed code execution. Manages the ZeroMQ sockets, JSON messaging protocol, and execution loop. Runs as processes 300-400 in the container. Details in [`../deep-dives/runtime/code-execution.md`](../deep-dives/runtime/code-execution.md). |
 | [`kernel_server.py`](kernel_server.py) | 10KB | FastAPI control plane for the agent environment. Exposes port 8888 for health checks and kernel lifecycle management. This is how the outer system controls the sandbox. Architecture documented in [`../deep-dives/runtime/control-plane.md`](../deep-dives/runtime/control-plane.md). |
 | [`utils.py`](utils.py) | 1.2KB | Shared utility functions. Small but essential helper code used across the other modules. |
+| [`etc/`](etc/) | ~8KB | System configuration files. Chrome security policies (search provider, autofill disabled, safe browsing off), ImageMagick resource limits and security policy (PDF/PS formats disabled), browser launch flags. |
+| [`pdf-viewer/`](pdf-viewer/) | ~4MB | Mozilla PDF.js Chrome extension for in-browser PDF rendering. Loaded by browser_guard.py with `--load-extension=/app/pdf-viewer`. Contains CJK character maps (~50 files), standard fonts (12 files), ~100 locale files. Independent from the PDF skill. See deep dive: [`../deep-dives/runtime/pdf-viewer.md`](../deep-dives/runtime/pdf-viewer.md). |
 
 ---
 

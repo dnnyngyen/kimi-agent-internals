@@ -138,7 +138,7 @@ All skills use the same generic tools. The `shell` tool that validates Excel fil
 
 When processing a spreadsheet request, the agent reads the XLSX skill documentation. This 925-line manual teaches compatibility rules, validation procedures, and styling conventions. The generic shell tool turns into an Excel specialist through context, not code.
 
-See [`../skills/README.md`](../skills/README.md) for how skills transform generic tools into domain experts.
+See [`../analysis/skills/README.md`](../analysis/skills/README.md) for how skills transform generic tools into domain experts.
 
 ---
 
@@ -150,6 +150,6 @@ The "mshtools-" prefix in the original files stands for "Moonshot Tools". In thi
 
 ## Related Documentation
 
-- [`../skills/README.md`](../skills/README.md) - How skills transform generic tools
+- [`../analysis/skills/README.md`](../analysis/skills/README.md) - How skills transform generic tools
 - [`../prompts/README.md`](../prompts/README.md) - Agent types that use these tools
 - [`../analysis/how-kimi-works.md`](../analysis/how-kimi-works.md) - Tool-use vs environment architecture

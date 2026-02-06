@@ -190,5 +190,11 @@ The extension contains 387 total files. The JavaScript code spans approximately 
 
 ---
 
+## Source Location
+
+The extension source is in `source-code-sample/pdf-viewer/` (original location: `/app/pdf-viewer/`).
+
+---
+
 *Document Version: 1.0*
 *Analysis Date: 2026-02-02*

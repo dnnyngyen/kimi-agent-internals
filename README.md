@@ -70,32 +70,40 @@ kimi-k2.5-system-analysis/
 │   ├── slides.md
 │   └── memory-format.txt
 │
-├── skills/                   # Skill definitions (4 output formats)
+├── analysis/                 # Research findings and analysis
 │   ├── README.md
-│   ├── docx/                 # Word documents
-│   │   ├── SKILL.md
-│   │   └── analysis.md
-│   ├── xlsx/                 # Excel spreadsheets
-│   │   ├── SKILL.md
-│   │   ├── analysis.md
-│   │   └── pivot-table.md
-│   ├── pdf/                  # PDF documents
-│   │   ├── SKILL.md
-│   │   ├── analysis.md
-│   │   └── routes/
-│   │       ├── html.md
-│   │       ├── latex.md
-│   │       └── process.md
-│   └── webapp/               # React web applications
-│       ├── SKILL.md
-│       └── analysis.md
+│   ├── execution-flows.md
+│   ├── how-kimi-works.md
+│   ├── skills-vs-personas.md
+│   └── skills/              # Skill system analysis
+│       ├── README.md
+│       ├── docx/analysis.md
+│       ├── pdf/analysis.md
+│       ├── webapp/analysis.md
+│       └── xlsx/analysis.md
 │
-├── source-code-sample/       # Extracted Python runtime (sample)
+├── source-code-sample/       # Extracted source from Kimi system
 │   ├── README.md
 │   ├── browser_guard.py      # 41KB - Browser automation
 │   ├── jupyter_kernel.py     # 17KB - Code execution
 │   ├── kernel_server.py      # 10KB - Control plane
-│   └── utils.py              # 1.2KB - Helper functions
+│   ├── utils.py              # 1.2KB - Helper functions
+│   ├── etc/                  # System configuration (~8KB)
+│   │   ├── chromium/         # Chrome security settings
+│   │   ├── chromium.d/       # Chrome launch flags
+│   │   └── ImageMagick-6/    # Image processing policy
+│   ├── pdf-viewer/          # ~4MB - PDF.js Chrome extension (viewer only)
+│   │   ├── manifest.json    # Extension manifest (v3)
+│   │   └── content/web/     # Viewer core with CJK font support
+│   └── skills/              # Skill system source code
+│       ├── docx/            # Word document generation
+│       │   ├── SKILL.md
+│       │   ├── scripts/     # Python/C# toolchain
+│       │   ├── assets/templates/  # C# templates
+│       │   └── validator/   # .NET validator configs
+│       ├── pdf/             # PDF generation
+│       ├── xlsx/            # Excel processing
+│       └── webapp-building/ # React webapp template
 │
 └── tools/                    # Tool schemas and documentation
     ├── README.md
@@ -114,7 +122,7 @@ kimi-k2.5-system-analysis/
 | Understand the architecture | [`analysis/how-kimi-works.md`](analysis/how-kimi-works.md) |
 | Learn the terminology | [`GLOSSARY.md`](GLOSSARY.md) |
 | Compare agent types | [`prompts/base-chat.md`](prompts/base-chat.md) vs [`prompts/ok-computer.md`](prompts/ok-computer.md) |
-| See a skill definition | [`skills/docx/SKILL.md`](skills/docx/SKILL.md) |
+| See a skill definition | [`source-code-sample/skills/docx/SKILL.md`](source-code-sample/skills/docx/SKILL.md) |
 | Explore technical details | [`deep-dives/README.md`](deep-dives/README.md) |
 
 ---

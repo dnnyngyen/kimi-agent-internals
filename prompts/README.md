@@ -215,7 +215,7 @@ User: "Create a Word document about climate change"
 
 ## Related Documentation
 
-- [`../skills/README.md`](../skills/README.md) - How skills work
+- [`../analysis/skills/README.md`](../analysis/skills/README.md) - How skills work
 - [`../tools/README.md`](../tools/README.md) - Tools available to these agents
 - [`../analysis/how-kimi-works.md`](../analysis/how-kimi-works.md) - Full architecture analysis
 - [`../analysis/skills-vs-personas.md`](../analysis/skills-vs-personas.md) - Why Slides is different

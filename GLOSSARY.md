@@ -45,7 +45,7 @@ Primary skill definition file containing templates, workflows, validation rules,
 Pre-built starting point for common tasks within a skill. Defines file structure, required components, and boilerplate code.
 
 ### Validator
-Quality assurance component that checks generated output against requirements. Examples: DOCX validator uses .NET OpenXML SDK, XLSX validator uses 77MB KimiXlsx binary.
+Quality assurance component that checks generated output against requirements. Examples: DOCX validator uses .NET OpenXML SDK (runtime configs documented), XLSX validator uses 77MB KimiXlsx binary.
 
 ### Route (PDF Routes)
 Alternative generation paths for the PDF skill: HTML route (wkhtmltopdf), LaTeX route (Tectonic), or Process route (headless browser).

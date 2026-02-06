@@ -75,5 +75,5 @@ Docs, Sheets, and Websites use skill scaffolding. Slides uses persona replacemen
 ## Related Documentation
 
 - [`../GLOSSARY.md`](../GLOSSARY.md) - Definitions of terms used in these analyses
-- [`../skills/README.md`](../skills/README.md) - The skill system explained
+- [`./skills/README.md`](./skills/README.md) - The skill system explained
 - [`../prompts/README.md`](../prompts/README.md) - Agent hierarchy and prompt structure
