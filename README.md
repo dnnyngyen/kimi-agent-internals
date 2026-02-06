@@ -3,8 +3,8 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-9cf.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Type: Research](https://img.shields.io/badge/Type-Research-0366d6)](https://github.com/dnnyngyen/kimi-agent-internals)
 [![Method](https://img.shields.io/badge/Method-Open%20Analysis-0969da)](https://github.com/dnnyngyen/kimi-agent-internals)
-[![GitHub Repo Size](https://img.shields.io/github/repo-size/dnnyngyen/kimi-agent-internals?style=flat&label=size&color=58a6ff)](https://github.com/dnnyngyen/kimi-agent-internals)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/dnnyngyen/kimi-agent-internals?style=flat&color=79c0ff)](https://github.com/dnnyngyen/kimi-agent-internals/commits/main)
+[![Repo Size](https://img.shields.io/github/repo-size/dnnyngyen/kimi-agent-internals?label=size&color=58a6ff)](https://github.com/dnnyngyen/kimi-agent-internals)
+[![Last Commit](https://img.shields.io/github/last-commit/dnnyngyen/kimi-agent-internals?color=79c0ff)](https://github.com/dnnyngyen/kimi-agent-internals/commits/main)
 
 > An analysis of Moonshot AI's Kimi K2.5 agent architecture.
 >
