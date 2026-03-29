@@ -14,13 +14,6 @@ This repository documents independent research into Moonshot AI's Kimi
 K2.5 agent architecture. It is not affiliated with, endorsed by, or
 sponsored by Beijing Moonshot Technology Co., Ltd. ("Moonshot AI").
 
-All extracted material (system prompts, tool schemas, source code,
-configuration files, skill definitions) was obtained through the Kimi
-agent's standard public interface. The agent executed shell commands
-and file reads within its container environment in response to
-conversational queries. No authentication was bypassed. No adversarial
-prompts were used. No binaries were decompiled.
-
 The maintainer of this repository DOES NOT CLAIM COPYRIGHT over the
 extracted material. Moonshot AI may hold copyright and/or other
 intellectual property rights in some or all extracted material. Users

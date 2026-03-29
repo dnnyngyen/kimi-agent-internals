@@ -35,7 +35,7 @@ Files: source-code/pdf-viewer/*
 Copyright: Mozilla Foundation and PDF.js contributors
 License: Apache-2.0
 
-Files: README.md METHODOLOGY.md GLOSSARY.md NOTICE.md
+Files: README.md GLOSSARY.md NOTICE.md
        analysis/* deep-dives/*
        source-code/README.md
        tools/README.md prompts/README.md

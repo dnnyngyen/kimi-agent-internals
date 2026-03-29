@@ -22,15 +22,6 @@ their original upstream licenses (Apache 2.0).
 
 See [LICENSE](LICENSE) for the complete legal text.
 
-## Extraction Method
-
-All material was extracted through the standard Kimi public interface
-(kimi.com/agent). The agent executed shell commands and file reads
-within its container environment in response to conversational queries
-to retrieve system prompts, source code, and configuration files. No
-prompt injection, authentication bypass, or adversarial techniques
-were used. See [METHODOLOGY.md](METHODOLOGY.md) for details.
-
 ## Disclaimer
 
 This is independent research. It is not affiliated with or endorsed by
